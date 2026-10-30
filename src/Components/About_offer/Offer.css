@@ -1,0 +1,72 @@
+.offer-section {
+    padding: 0 5% 0 5%;
+
+}
+
+.offer-heading {
+    text-align: center;
+    color: #00ff87;
+    font-weight: 800;
+    font-size: 2em;
+    -webkit-text-stroke: 1px black;
+}
+
+.offer-description {
+    text-align: center;
+    color: #07633c;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.offer-section .list-group .list-group-item {
+    width: 100%;
+    background: #07633c;
+    color: #00ff87;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 1em 2em 1em 2em;
+    border-radius: 1em 1em;
+    -webkit-text-stroke: .25px white;
+}
+
+@media (min-width:501px) and (max-width:991px) {
+    .offer-section {
+        padding: 0 10% 0 10%;
+    }
+
+    .offer-description {
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .offer-section .list-group .list-group-item {
+        font-size: .9em;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:500px) {
+    .offer-section {
+        padding: 0 7% 0 7%;
+    }
+
+    .offer-heading {
+        text-align: center;
+        color: #00ff87;
+        font-weight: 800;
+        font-size: 1.5em;
+        -webkit-text-stroke: 1px black;
+    }
+
+    .offer-description {
+        text-align:center;
+        color: #07633c;
+        font-size: .75em;
+        font-weight: 600;
+    }
+
+    .offer-section .list-group .list-group-item {
+        font-size: .65em;
+        font-weight: 400;
+    }
+}

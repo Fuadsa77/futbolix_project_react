@@ -1,0 +1,144 @@
+.legendary-heading {
+    color: #00c853;
+    font-weight: 700;
+    font-size: 1.6em;
+    padding-left: 3%;
+}
+
+.legendary-section {
+    padding: 0 5% 0 5%;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.legendary-sub-heading {
+    color: white;
+    font-style: italic;
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-left: 4%;
+}
+
+.legendary-card .card-body,
+.legendary-card .card-footer {
+    border: none;
+}
+
+.legendary-card .card-footer {
+    height: 100%;
+    max-height: 4em;
+}
+
+
+.legendary-card {
+    border-radius: 1em;
+    border: none;
+    background-color: white;
+    height: 100%;
+    max-height: 27em;
+    transition: all .3s ease-in-out;
+}
+
+.legendary-card .card-body {
+    margin: 0;
+    padding: 0.1em;
+}
+
+.legendary-card-image {
+    border-radius: .8em;
+    width: 100%;
+    max-height: 23em;
+}
+
+.legendary-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.legendary-card-title {
+    color: #00c853;
+    font-size: 1.2em;
+    font-weight: 550;
+    text-align: center;
+
+
+    display: -webkit-box;
+    --webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    height: calc(1.16em * 1);
+}
+
+.legendary-card:hover .legendary-card-title{
+    color: rgba(0, 200, 83,0.8);
+}
+
+.legendary-card:hover{
+    transform: scale(1.03);
+}
+
+
+.view-more {
+    margin-top: 5%;
+}
+
+.view-more button {
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    background-color: #00c853;
+    border: 1px solid white;
+    min-height: 3em;
+    width: 10em;
+    transition: 0.7s ease-out;
+}
+
+.view-more button:hover {
+    background-color: white;
+    border: 3px solid #00c853;
+    color: #0c7237;
+    font-weight: 600;
+    width: 15em;
+}
+
+@media (min-width:501px) and (max-width:991px) {
+    .legendary-section {
+        padding: 0 10% 0 10%;
+    }
+
+    .legendary-heading {
+        text-align: center;
+        text-decoration: 3px underline #00c853;
+    }
+
+    .legendary-card-title{
+        font-size: .8em;
+        font-weight: 650;
+    }
+}
+
+@media (max-width:500px) {
+    .legendary-section {
+        padding: 0 7% 0 7%;
+    }
+
+    .legendary-heading {
+        text-align: center;
+    }
+
+    .legendary-sub-heading {
+        text-align: center;
+        color: white;
+        -webkit-text-stroke: unset;
+        font-size: 1em;
+    }
+
+    .legendary-card-title{
+        font-size: .75em;
+    }
+
+}

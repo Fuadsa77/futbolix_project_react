@@ -1,0 +1,130 @@
+.newsletter-section {
+    padding: 0 5% 0 5%;
+    background: #00c853;
+    background: linear-gradient(150deg, hsl(155, 87%, 21%) 30%, rgba(0, 255, 135, 1) 85%);
+    min-height: 80vh;
+}
+
+.newsletter-heading {
+    font-size: 5em;
+    font-weight: 700;
+    color: #00c853;
+    -webkit-text-stroke: .8px black;
+    text-align: center;
+    padding-left: 3%;
+}
+
+.newsletter-sub-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.newsletter-email-input {
+    min-width: 20em;
+    min-height: 1em;
+    border-radius: 1em 1em;
+    padding: .5em 3em;
+    border: 5px solid #00c853;
+    outline: none;
+    font-size: 1rem;
+}
+
+.newsletter-input-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-input-group-label {
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    transform: translateY(-50%);
+    background: #00c853;
+    padding: 3px 10px 3px 10px;
+    border-radius: .5em .5em;
+    color: #0f0f0f;
+    font-weight: 350;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.newsletter-email-input:focus+.newsletter-input-group-label,
+.newsletter-email-input:hover+.newsletter-input-group-label {
+    visibility: visible;
+}
+
+.newsletter-subcribe-button {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10em;
+    min-height: 2.5em;
+    border: 3px solid #0c7237;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 2em 2em;
+    background: linear-gradient(186deg, rgba(15, 15, 15, 1) 9%, rgba(0, 255, 135, 1) 94%);
+    background-clip: padding-box;
+    transition: all .3s ease-in-out;
+}
+
+.newsletter-subcribe-button:hover {
+    transform: scale(1.2);
+    transform: translateX(-50%);
+    border: 3px solid #00c853;
+    color: rgb(211, 207, 207);
+    outline: none;
+    box-shadow: none;
+}
+
+@media (min-width:501px) and (max-width:991px) {
+    .newsletter-section {
+        padding: 0 10% 0 10%;
+    }
+
+    .newsletter-heading {
+        font-size: 9em;
+    }
+
+    .newsletter-sub-heading {
+        font-size: 1.5em;
+        -webkit-text-stroke: 1px #0c7237;
+    }
+    .newsletter-input-group-label{
+        left: 28%;
+    }
+}
+
+@media (max-width:500px) {
+    .newsletter-section {
+        padding: 0 7% 0 7%;
+    }
+
+    .newsletter-heading {
+        font-size: 1.8em;
+    }
+
+    .newsletter-sub-heading {
+        font-size: 1em;
+        -webkit-text-stroke: .5px #0c7237;
+    }
+
+
+    .newsletter-email-input {
+        padding: .25em 1em;
+        border: 3px solid #00c853;
+        border-radius: .75em .75em;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+    }
+
+    .newsletter-input-group-label{
+        left: 5%;
+    }
+}

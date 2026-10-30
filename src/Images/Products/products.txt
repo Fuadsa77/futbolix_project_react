@@ -1,0 +1,258 @@
+// National Jerseys
+
+ 1  *Portugal-Away-Shirt-World-Cup-2026-Ronaldo-7
+ 2 *Portugal-Away-Shirt-World-Cup-2026-Ronaldo-7 kids
+ 3 *Portugal Home Shirt World Cup 2026
+
+ 4  *Brazil Away Shirt Wolrd Cup 2026 kids
+ 5 *Brazil Away Shirt Wolrd Cup 2026 
+ 6 *Brazil Home Shirt World Cup 2026
+
+ 9  *Argentina Away Shirt World Cup 2026 Messi 10
+ 8  *Argentina Away Shirt World Cup 2026 Messi 10 kids
+ 10 *Argentina Home Shirt World Cup 2026 Women Messi 10
+
+ 11 *Spain Away Shirt World Cup 2026
+ 12 *Spain Home Shirt World Cup 2026 LAMINE YAMAL 19
+
+ 13 *France Home Shirt World Cup 2026 Aero-FIT Authentic
+ 14 *France Away Shirt World Cup 2026 MBAPPE 10
+
+ 15 *Norway Away Shirt World Cup 2026 BRAUT HAALAND 9
+
+ 16 *England Home Shirt World Cup 2026 KANE 9
+
+ 17 *Germany Home Shirt World Cup 2026
+   
+ 18 *Italy Home Shirt 2026/27
+
+ 19 *Mexico Home Shirt World Cup 2026
+
+ 20 *Morocco Home Shirt World Cup 2026
+
+
+
+// Club Jerseys
+
+ 1 *Real Madrid Home Shirt 2025-26
+ 2 *Real Madrid 3rd Shirt 2025/26
+
+ 3 *Paris Saint Germain Away Shirt 2025-26
+
+ 4 *Inter Miami Away Shirt 2026 Messi 10 Authentic
+
+ 5 *Ac-Milan-Home-Shirt-2025-26-Kids.jpg
+
+ 6 *Barcelona Home Shirt 2025/26
+ 7 *Barcelona Fourth Shirt 2025/26
+
+ 8 *Liverpool-Home-Shirt-2025-26
+
+  9 *Manchester United Home Shirt 2025/26 Authentic
+ 10 *Manchester United Away Shirt 2025/26 Authentic
+
+ 11 *Manchester City Home Shirt 2025/26
+
+ 12 *Arsenal Home Shirt 2025/26 Authentic
+ 13 *Arsenal Away Shirt 2025/26 Authentic
+
+ 14 *Bayern-München-Home-Shirt-2025-26
+
+ 15 *Juventus Home Shirt 2025/26
+ 16 *Juventus Away Shirt 2025/26 Authentic
+
+
+
+
+// Legendary Jerseys
+
+ 1 *Ac Milan Legendary Shirt 2006-07
+ 2 *Barcelona 100th Anniversary Special Shirt 1998-1999
+ 3 *Real-Madrid-Legendary-Shirt-2002-2003
+ 4 *England Iconic Shirt 1998
+ 5 *Nike-Brazil-Legendary-Shirt-1998-2002
+
+ 6 *Messi Barcelona 2011 Jersey
+ 7 *Ronaldo Real Madrid 2017 Jersey
+ 8 *Maradona Argentina 1986 Jersey
+ 9 *Zidane France 1998 Jersey
+10 *Netherlands 1988 Euro Jersey
+11 *Germany 1990 World Cup Jersey
+12 *Brazil 1970 World Cup Jersey
+13 *Juventus 1996 UCL Jersey
+14 *England 1996 Euro Jersey
+15 *Barcelona 1992 European Cup Jersey
+16 *Thierry Henry Arsenal 2004 Jersey
+17 *Ronaldinho Barcelona 2005 Jersey
+18 *Steven Gerrard Liverpool 2005 UCL Jersey
+19 *Paolo Maldini AC Milan 2003 Jersey
+20 *Wayne Rooney Manchester United 2008 Jersey
+21 *Ronaldo Brazil 2002 Jersey
+24 *Cristiano Ronaldo Portugal 2016 Euro Jersey
+25 *Andrés Iniesta Spain 2010 World Cup Jersey
+26 *Neymar Santos fc
+
+*progress
+
+
+
+// Fanmade jerseys
+
+ 1 *Real Madrid X Marvel Training T-Shirt Pre Match - White/Black/Bold Gold
+ 2 *Barcelona Galaxy Concept Kit
+ 3 *Real Madrid Purple Flame Edition
+ 4 *Manchester United Blackout Kit
+ 5 *PSG Neon Lights Jersey
+ 6 *Juventus Gold Edition Concept
+ 7 *Arsenal Marble Design Kit
+ 8 *PSG Street Graffiti Jersey
+ 9 *Barcelona Urban Edition Kit
+10 *Chelsea London Nights Kit
+11 *Inter Milan Cyberpunk Kit
+12 *Bayern Munich Neon Tech Jersey
+13 *Real Madrid Future Vision Kit
+14 *Manchester City Digital Wave Kit
+
+
+
+
+
+
+
+// Firm Ground Boots (FG)
+
+Nike Air Zoom Mercurial Superfly 10 Elite FG Sam Kerr Personal Edition - Pale Ivory/Black
+adidas Predator Elite Fold-over Tongue Elite FG Kaká - Core Black/Purple/Gold Metallic LIMITED EDITION
+Nike Tiempo Maestro Elite FG Infra-Red x Jordan - Red/Black LIMITED EDITION
+Under Armour Shadow Elite 3.0 FG Pitch Viper - Aero Pink LIMITED EDITION
+Under Armour Shadow Elite 4.0 FG - White/Blue/Orange
+adidas-F50-Elite-Laceless-FG-Lamine-Yamal-FootwearWhite-CoreBlack-LucidRed
+
+
+
+
+// Multi-Ground Boots (MG)
+
+New Balance Furon V8 Elite MG Pure Ambition - Pink Heat/White/Gold
+adidas Predator Pro Fold-over Tongue MG Coral Blaze - Signal Coral/Footwear White/Beam Orange
+PUMA Future 9 Pro MG Unleashed - Glowing Red/PUMA White/PUMA Black/Puma Silver
+PUMA Future 9 Ultimate MG White Gold - PUMA White/Metallic Gold/PUMA Black
+
+
+
+
+// Artificial Ground Boots(AG)
+
+Nike Air Zoom Mercurial Vapor 16 Elite AG-PRO Attack - Racer Blue/White
+adidas F50 Sparkfusion Elite Mid Cut FG/AG Ice Cold Precision - Almond Blue/Dune Pearl/Hi-Res Yellow Women
+adidas F50 Elite Laceless AG Celestial Victory - Blue Fusion/Lucid Lemon/Lucid Pink
+
+
+
+// Astro Turf Boots(TF)
+
+PUMA-Future-9-Pro-Cage-TF-Dreamrush-IcyBlue-BlueJewel
+Nike Tiempo Legend 10 Pro TF Shadow - Black/Ice Blue
+Mizuno Morelia Sala Elite TF - White/Black/Chinese Red
+Mizuno-Morelia-Sala-Elite-TF-Black-White-ChineseRed
+Under Armour Shadow 3.0 TF - Castlerock/Blue Atlantis
+
+
+
+
+// Indoor Court Boots (IC)
+
+Mizuno Morelia Sala Pro IN Unlimited Black - Black
+New Balance 442 v2 Pro IN Flash Point - White/Green/Black
+Adidas-F50-League-In-Ice-Cold-Precision-Lucid-Ray-blue-Solar-Yellow-light-Utility-Aqua-Kids
+Nike Gato IC - White/Black/Gym Red
+adidas Samba LT - Core Green/Chalk White/Gold Metallic Women
+adidas originals Spezial IN - Core Black/Footwear White/Gum Light Brown
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FOOTBALLS
+🌱 Grass / Outdoor
+Adidas UCL Match Ball
+Nike Premier League Ball
+Adidas-Football-Trionda-Pro-Mash-Up-World-Cup-2026-Match-Ball-White-Black
+NIke-Football-Academy-T90-White-Black-Red-Black
+NIke-Football-Academy-T90-White-Black-Red-Black
+Select X Unisport Football Match Day - White/Green
+
+
+🧱 Non-Grass / Hard Ground
+Select Football Street v24 - Navy/Blue
+Select Football Futsal Street V22 - Orange/Blue
+Nivia-Country-color-training-football
+
+🏟️ Futsal / Indoor
+adidas Football Conext 26 Pro Sala - White/Black/Silver Metallic
+Nike Football Futsal Pro - White/Bright Crimson/Black
+PUMA Football Futsal 3 MS - PUMA White/Garnet Rose/Aqua Blue
+Hummel Football Inspire Futsal Match FB - Maroon/White/Gold
+
+
+
+
+
+// ACCESSORIES
+🏃 Training Gear
+
+
+🧤 Player Gear
+Nike Training Shorts Dri-FIT ADV Vapor - Black/White
+Barcelona Training Jacket Tech Woven Windrunner FZ - Smoke Grey
+Nike Pro Top Dri-FIT - Black/White
+Hummel Lead Hoodie - Grey Kids
+Hummel Football Socks Essential - Black/White
+Hummel Shin Pads Super Light - Red
+Hummel Shorts Authentic - Black
+Hummel T-Shirt hmlGO 2.0 - Black
+Hummel Football Socks Element - Lime
+Hummel Nielsen Slide - Black
+adidas Shin Pads Tiro Competition - Black/Gold Metallic
+
+🎽 Extras
+Football Gym Bag
+Water Bottle
+
+
+
+
+// SIZES YOU CAN USE
+Small (S)
+Medium (M)
+Large (L)
+Extra Large (XL)
+
+👉 For boots:
+
+6, 7, 8, 9, 10
+
+👉 For footballs:
+
+Size 4
+Size 5
+
+
+
+
+// Football Brands
+select
+New Balance
+Mizuno
+Hummel
+
+🧤 Gear & Accessories
+Decathlon 

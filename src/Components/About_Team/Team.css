@@ -1,0 +1,61 @@
+
+.team-section{
+    padding: 0 5% 0 5%;
+    background-color: black;
+}
+
+.team-heading {
+    text-align: center;
+    color: #00ff87;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.team-profile{
+    min-height: 18em;
+    border-radius:.5em;
+    width: 100%;
+    position: relative;
+}
+.team-profile-role{
+    background-color:transparent;
+    min-height: 5.8em;
+    width: 100%;
+}
+
+.team-profile-name{
+    color: #00ff87;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.team-profile-role p{
+    color: #00ff87;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+
+
+
+
+
+@media (min-width:501px) and (max-width:991px) {
+    .team-section {
+        padding: 0 10% 0 10%;
+    }
+}
+
+@media (max-width:500px) {
+    .team-section {
+        padding: 0 7% 0 7%;
+    }
+
+    .team-heading {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+
+}
