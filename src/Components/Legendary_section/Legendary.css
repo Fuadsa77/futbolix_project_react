@@ -86,7 +86,7 @@
     margin-top: 5%;
 }
 
-.view-more button {
+.view-more .btn {
     text-align: center;
     color: black;
     font-weight: 500;
@@ -97,7 +97,7 @@
     transition: 0.7s ease-out;
 }
 
-.view-more button:hover {
+.view-more .btn:hover {
     background-color: white;
     border: 3px solid #00c853;
     color: #0c7237;
@@ -112,7 +112,6 @@
 
     .legendary-heading {
         text-align: center;
-        text-decoration: 3px underline #00c853;
     }
 
     .legendary-card-title{

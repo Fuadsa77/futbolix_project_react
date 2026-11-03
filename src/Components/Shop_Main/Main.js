@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
+import { useSearchParams } from "react-router-dom";
 import './Main.css'
 import Cart from '../../Icons/Cart.png'
 import Wishlist from '../../Icons/Wishlist.png'
@@ -6,7 +7,7 @@ import Filter from '../../Icons/filter.png'
 
 export default function Main() {
 
-    const [sProducts] = useState([
+    const [ps] = useState([
 
 
         // NATIONAL JERSEYS
@@ -41,7 +42,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Player Edition",
-            image: require( "../../Images/Products/Argentina-Away-Shirt-World-Cup-2026-Messi-10.jpg"),
+            image: require("../../Images/Products/Argentina-Away-Shirt-World-Cup-2026-Messi-10.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -58,7 +59,7 @@ export default function Main() {
             age: "kids",
             gender: "",
             special_note: "Kids",
-            image: require( "../../Images/Products/Brazil-Away-Shirt-Wolrd-Cup-2026.jpg"),
+            image: require("../../Images/Products/Brazil-Away-Shirt-Wolrd-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -75,7 +76,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Brazil-Away-Shirt-Wolrd-Cup-2026.jpg"),
+            image: require("../../Images/Products/Brazil-Away-Shirt-Wolrd-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -92,7 +93,7 @@ export default function Main() {
             age: "kids",
             gender: "",
             special_note: "Kids",
-            image: require( "../../Images/Products/Portugal-Away-Shirt-World-Cup-2026-Ronaldo-7.jpg"),
+            image: require("../../Images/Products/Portugal-Away-Shirt-World-Cup-2026-Ronaldo-7.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -109,7 +110,7 @@ export default function Main() {
             age: "kids",
             gender: "",
             special_note: "Kids",
-            image: require( "../../Images/Products/Argentina-Away-Shirt-World-Cup-2026-Messi-10.jpg"),
+            image: require("../../Images/Products/Argentina-Away-Shirt-World-Cup-2026-Messi-10.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -126,7 +127,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Portugal-Home-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Portugal-Home-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -143,7 +144,7 @@ export default function Main() {
             age: "adults",
             gender: "women",
             special_note: "Women",
-            image: require( "../../Images/Products/Argentina-Home-Shirt-World-Cup-2026-Women-Messi-10.jpg"),
+            image: require("../../Images/Products/Argentina-Home-Shirt-World-Cup-2026-Women-Messi-10.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -160,7 +161,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Brazil-Home-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Brazil-Home-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -177,7 +178,7 @@ export default function Main() {
             age: "kids",
             gender: "men",
             special_note: "Player Edition",
-            image: require( "../../Images/Products/Spain-Home-Shirt-World-Cup-2026-LAMINE-YAMAL-19.jpg"),
+            image: require("../../Images/Products/Spain-Home-Shirt-World-Cup-2026-LAMINE-YAMAL-19.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -194,7 +195,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Spain-Away-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Spain-Away-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -211,7 +212,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/France-Home-Shirt-World-Cup-2026-Aero-FIT-Authentic.jpg"),
+            image: require("../../Images/Products/France-Home-Shirt-World-Cup-2026-Aero-FIT-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -228,7 +229,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Player Edition",
-            image: require( "../../Images/Products/France-Away-Shirt-World-Cup-2026-MBAPPE-10.jpg"),
+            image: require("../../Images/Products/France-Away-Shirt-World-Cup-2026-MBAPPE-10.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -245,7 +246,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Player Edition",
-            image: require( "../../Images/Products/Norway-Away-Shirt-World-Cup-2026-BRAUT-HAALAND-9.jpg"),
+            image: require("../../Images/Products/Norway-Away-Shirt-World-Cup-2026-BRAUT-HAALAND-9.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -262,7 +263,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Player Edition",
-            image: require( "../../Images/Products/England-Home-Shirt-World-Cup-2026-KANE 9.jpg"),
+            image: require("../../Images/Products/England-Home-Shirt-World-Cup-2026-KANE 9.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -279,7 +280,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Germany-Home-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Germany-Home-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -296,7 +297,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Italy-Home-Shirt-2026-27.jpg"),
+            image: require("../../Images/Products/Italy-Home-Shirt-2026-27.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -313,7 +314,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Mexico-Home-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Mexico-Home-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -330,7 +331,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Kids",
-            image: require( "../../Images/Products/Morocco-Home-Shirt-World-Cup-2026.jpg"),
+            image: require("../../Images/Products/Morocco-Home-Shirt-World-Cup-2026.jpg"),
             size_text: "Many sizes available"
         },
 
@@ -354,7 +355,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Real-Madrid-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Real-Madrid-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -371,7 +372,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Paris-Saint-Germain-Away-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Paris-Saint-Germain-Away-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -388,7 +389,7 @@ export default function Main() {
             age: "kids",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Inter-Miami-Away-Shirt-2026-Messi-10-Authentic.jpg"),
+            image: require("../../Images/Products/Inter-Miami-Away-Shirt-2026-Messi-10-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -405,7 +406,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Real-Madrid-3rd-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Real-Madrid-3rd-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -422,7 +423,7 @@ export default function Main() {
             age: "kids",
             gender: "men",
             special_note: "Kids",
-            image: require( "../../Images/Products/Ac-Milan-Home-Shirt-2025-26-Kids.jpg"),
+            image: require("../../Images/Products/Ac-Milan-Home-Shirt-2025-26-Kids.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -439,7 +440,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Barcelona-Fourth-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Barcelona-Fourth-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -456,7 +457,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Kids",
-            image: require( "../../Images/Products/Barcelona-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Barcelona-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -473,7 +474,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Liverpool-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Liverpool-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -490,7 +491,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Manchester-United-Home-Shirt-2025-26-Authentic.jpg"),
+            image: require("../../Images/Products/Manchester-United-Home-Shirt-2025-26-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -507,7 +508,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Manchester-United-Away-Shirt-2025-26-Authentic.jpg"),
+            image: require("../../Images/Products/Manchester-United-Away-Shirt-2025-26-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -524,7 +525,7 @@ export default function Main() {
             age: "kids",
             gender: "men",
             special_note: "Kids",
-            image: require( "../../Images/Products/Manchester-City-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Manchester-City-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -541,7 +542,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Arsenal-Home-Shirt-2025-26-Authentic.jpg"),
+            image: require("../../Images/Products/Arsenal-Home-Shirt-2025-26-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -558,7 +559,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Arsenal-Away-Shirt-2025-26-Authentic.jpg"),
+            image: require("../../Images/Products/Arsenal-Away-Shirt-2025-26-Authentic.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -575,7 +576,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Bayern-München-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Bayern-München-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -592,7 +593,7 @@ export default function Main() {
             age: "adults",
             gender: "women",
             special_note: "Women",
-            image: require( "../../Images/Products/Juventus-Home-Shirt-2025-26.jpg"),
+            image: require("../../Images/Products/Juventus-Home-Shirt-2025-26.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -609,7 +610,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "Authentic",
-            image: require( "../../Images/Products/Juventus-Away-Shirt-2025-26-Authentic.jpg"),
+            image: require("../../Images/Products/Juventus-Away-Shirt-2025-26-Authentic.jpg"),
             size_text: "Many sizes available"
         },
 
@@ -637,7 +638,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Ac-Milan-Legendary-Shirt-2006-07.jpg"),
+            image: require("../../Images/Products/Ac-Milan-Legendary-Shirt-2006-07.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -655,7 +656,7 @@ export default function Main() {
             age: "kids",
             gender: "men",
             special_note: "Kids",
-            image: require( "../../Images/Products/Barcelona-100th-Anniversary-Legendary-Shirt-1998-1999.jpg"),
+            image: require("../../Images/Products/Barcelona-100th-Anniversary-Legendary-Shirt-1998-1999.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -673,7 +674,7 @@ export default function Main() {
             age: "adults",
             gender: "women",
             special_note: "Women",
-            image: require( "../../Images/Products/England-Legendary-Shirt-1998.jpg"),
+            image: require("../../Images/Products/England-Legendary-Shirt-1998.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -691,7 +692,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Real-Madrid-Legendary-Shirt-2002-2003.jpg"),
+            image: require("../../Images/Products/Real-Madrid-Legendary-Shirt-2002-2003.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -709,7 +710,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Nike-Brazil-Legendary-Shirt-1998-2002.jpg"),
+            image: require("../../Images/Products/Nike-Brazil-Legendary-Shirt-1998-2002.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -727,7 +728,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Liverpool-Legendary-Shirt-1993-1995.jpg"),
+            image: require("../../Images/Products/Liverpool-Legendary-Shirt-1993-1995.jpg"),
             size_text: "Many sizes available"
         },
 
@@ -747,7 +748,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Messi-Barcelona-2011-Jersey.jpg"),
+            image: require("../../Images/Products/Messi-Barcelona-2011-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -765,7 +766,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Ronaldo-Real-Madrid-2017-Jersey.jpg"),
+            image: require("../../Images/Products/Ronaldo-Real-Madrid-2017-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -783,7 +784,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Maradona-Argentina-1986-Jersey.jpg"),
+            image: require("../../Images/Products/Maradona-Argentina-1986-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -801,7 +802,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Zidane-France-1998-Jersey.jpg"),
+            image: require("../../Images/Products/Zidane-France-1998-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -819,7 +820,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Netherlands-1988-Euro-Jersey.jpg"),
+            image: require("../../Images/Products/Netherlands-1988-Euro-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -837,7 +838,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Germany-1990-World-Cup-Jersey.jpg"),
+            image: require("../../Images/Products/Germany-1990-World-Cup-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -855,7 +856,7 @@ export default function Main() {
             age: "agults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Pele-Brazil-Jersey.jpg"),
+            image: require("../../Images/Products/Pele-Brazil-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -873,7 +874,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Juventus-1996-UCL-Jersey.jpg"),
+            image: require("../../Images/Products/Juventus-1996-UCL-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -891,7 +892,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/England-1996-Euro-Jersey.jpg"),
+            image: require("../../Images/Products/England-1996-Euro-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -909,7 +910,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Barcelona-1996-European-Cup-Jersey.jpg"),
+            image: require("../../Images/Products/Barcelona-1996-European-Cup-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -927,7 +928,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Thierry-Henry-Arsenal-2004-Jersey.jpg"),
+            image: require("../../Images/Products/Thierry-Henry-Arsenal-2004-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -945,7 +946,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Ronaldinho-Barcelona-2006-Jersey.jpg"),
+            image: require("../../Images/Products/Ronaldinho-Barcelona-2006-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -963,7 +964,7 @@ export default function Main() {
             age: "adults",
             gender: "women",
             special_note: "Women",
-            image: require( "../../Images/Products/Steven-Gerrard-Liverpool-2006-08-Jersey.jpg"),
+            image: require("../../Images/Products/Steven-Gerrard-Liverpool-2006-08-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -981,7 +982,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Paolo-Maldini-AC-Milan-Jersey.jpg"),
+            image: require("../../Images/Products/Paolo-Maldini-AC-Milan-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -999,7 +1000,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Wayne-Rooney-Manchester-United-2015-16-Jersey.jpg"),
+            image: require("../../Images/Products/Wayne-Rooney-Manchester-United-2015-16-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -1017,7 +1018,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Ronaldo-Brazil-2004-06-Jersey.jpg"),
+            image: require("../../Images/Products/Ronaldo-Brazil-2004-06-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -1035,7 +1036,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Cristiano-Ronaldo-Portugal-Away-2016-Euro-Jersey.jpg"),
+            image: require("../../Images/Products/Cristiano-Ronaldo-Portugal-Away-2016-Euro-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -1053,7 +1054,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Andrés-Iniesta-Spain-2010-World-Cup-Jersey.jpg"),
+            image: require("../../Images/Products/Andrés-Iniesta-Spain-2010-World-Cup-Jersey.jpg"),
             size_text: "Many sizes available"
         },
         {
@@ -1071,7 +1072,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Neymar-Jr-Santos-2011-Jersey.jpg"),
+            image: require("../../Images/Products/Neymar-Jr-Santos-2011-Jersey.jpg"),
             size_text: "Many sizes available"
         },
 
@@ -1095,7 +1096,7 @@ export default function Main() {
             age: "adults",
             gender: "men",
             special_note: "",
-            image: require( "../../Images/Products/Real-Madrid-X-Marvel-Training-T-Shirt-Pre-Match-White-Black-BoldGold.jpg"),
+            image: require("../../Images/Products/Real-Madrid-X-Marvel-Training-T-Shirt-Pre-Match-White-Black-BoldGold.jpg"),
             size_text: "Many sizes available"
         },
 
@@ -1119,7 +1120,7 @@ export default function Main() {
             size: "5",
             gender: "",
             special_note: "",
-            image: require( "../../Images/Products/Nike-Football-Flight-White-Blackened-Blue-Hyper-Crimson.jpg"),
+            image: require("../../Images/Products/Nike-Football-Flight-White-Blackened-Blue-Hyper-Crimson.jpg"),
             size_text: "Ball Sz. 5"
         },
         {
@@ -1136,7 +1137,7 @@ export default function Main() {
             age: "",
             gender: "",
             special_note: "",
-            image: require( "../../Images/Products/NIke-Football-Academy-T90-White-Black-Red-Black.jpg"),
+            image: require("../../Images/Products/NIke-Football-Academy-T90-White-Black-Red-Black.jpg"),
             size_text: "Ball Sz. 3, Ball Sz. 5"
         },
 
@@ -1160,7 +1161,7 @@ export default function Main() {
             age: "kids",
             gender: "",
             special_note: "Kids",
-            image: require( "../../Images/Products/Adidas-F50-League-In-Ice-Cold-Precision-Lucid-Ray-blue-Solar-Yellow-light-Utility-Aqua-Kids.jpg"),
+            image: require("../../Images/Products/Adidas-F50-League-In-Ice-Cold-Precision-Lucid-Ray-blue-Solar-Yellow-light-Utility-Aqua-Kids.jpg"),
             size_text: "Many Sizes Available"
         },
 
@@ -1183,12 +1184,99 @@ export default function Main() {
             age: "",
             gender: "",
             special_note: "",
-            image: require( "../../Images/Products/Adidas-F50-League-In-Ice-Cold-Precision-Lucid-Ray-blue-Solar-Yellow-light-Utility-Aqua-Kids.jpg"),
+            image: require("../../Images/Products/Adidas-F50-League-In-Ice-Cold-Precision-Lucid-Ray-blue-Solar-Yellow-light-Utility-Aqua-Kids.jpg"),
             size_text: ""
         },
 
 
     ]);
+    const [searchParams] = useSearchParams();
+    const getFiltersFromUrl = () => {
+        const fromUrl = { ...initialFilters };
+        Object.keys(initialFilters).forEach((key) => {
+            const value = searchParams.get(key);
+            if (value) fromUrl[key] = value;
+        });
+        return fromUrl;
+    };
+    const initialFilters = {
+        category: "all",
+        bootType: "all",
+        jerseyType: "all",
+        jerseyClub: "all",
+        jerseyNational: "all",
+        jerseyLegendary: "all",
+        footballType: "all",
+        accessoriesType: "all",
+        brand: "all",
+        size: "all",
+        age: "all",
+        gender: "all",
+    };
+    const [filters, setFilters] = useState(getFiltersFromUrl);
+
+    useEffect(() => {
+        setFilters(getFiltersFromUrl());
+    }, [searchParams]);
+
+    const [sortPrice, setSortPrice] = useState("default");
+
+    const filteredProducts = useMemo(() => {
+        const f = filters;
+        const match = (selected, value) => selected === "all" || selected === value;
+
+        let result = ps.filter((p) => {
+            if (!match(f.category, p.category)) return false;
+            if (!match(f.brand, p.brand)) return false;
+            if (!match(f.age, p.age)) return false;
+            if (!match(f.gender, p.gender)) return false;
+
+            // an empty size means "many sizes available", so it matches every size
+            if (f.size !== "all" && p.size !== "" && p.size !== f.size) return false;
+
+            if (f.category === "boot" && !match(f.bootType, p.boot_type)) return false;
+            if (f.category === "football" && !match(f.footballType, p.football_type)) return false;
+            if (f.category === "accessories" && !match(f.accessoriesType, p.accessories_type)) return false;
+
+            if (f.category === "jersey") {
+                if (!match(f.jerseyType, p.jersey_type)) return false;
+                if (f.jerseyType === "club" && !match(f.jerseyClub, p.team)) return false;
+                if (f.jerseyType === "national" && !match(f.jerseyNational, p.team)) return false;
+                if (f.jerseyType === "legendary" && !match(f.jerseyLegendary, p.legendary_type)) return false;
+            }
+            return true;
+        });
+
+        if (sortPrice === "low") result = [...result].sort((a, b) => a.price - b.price);
+        if (sortPrice === "high") result = [...result].sort((a, b) => b.price - a.price);
+
+        return result;
+    }, [ps, filters, sortPrice]);
+
+    const handleFilter = (e) => {
+        const { name, value } = e.target;
+
+        setFilters((prev) => {
+            const next = { ...prev, [name]: value };
+
+            if (name === "category") {
+                next.bootType = "all";
+                next.jerseyType = "all";
+                next.jerseyClub = "all";
+                next.jerseyNational = "all";
+                next.jerseyLegendary = "all";
+                next.footballType = "all";
+                next.accessoriesType = "all";
+            }
+            if (name === "jerseyType") {
+                next.jerseyClub = "all";
+                next.jerseyNational = "all";
+                next.jerseyLegendary = "all";
+            }
+            return next;
+        });
+    };
+
 
 
     return (
@@ -1207,7 +1295,7 @@ export default function Main() {
                     </div>
                     <div className="offcanvas-body">
                         <h5 className="text-center">Category</h5>
-                        <select id="category-filter" className="filter-sort-box ">
+                        <select name="category" value={filters.category} onChange={handleFilter} className="filter-sort-box">
                             <option value="all">All</option>
                             <option value="boot">BOOTS</option>
                             <option value="football">FOOTBALLS</option>
@@ -1215,83 +1303,97 @@ export default function Main() {
                             <option value="accessories">ACCESSORIES</option>
                         </select>
 
-                        <div id="boot-filter" style={{display:'none'}}>
-                            <h5 className="text-center">Boot Type</h5>
-                            <select className="filter-sort-box ">
-                                <option value="all">Default</option>
-                                <option value="fg">Firm Ground</option>
-                                <option value="ag">Artificial Ground</option>
-                                <option value="mg">Multi-Ground</option>
-                                <option value="tf">Astro Turf</option>
-                                <option value="ic">Indoor Court</option>
-                            </select>
-                        </div>
-
-                        <div id="jersey-section" style={{display:'none'}}>
-                            <h5 className="text-center">Jersey Type</h5>
-                            <select id="jersey-type" className="filter-sort-box ">
-                                <option value="all">Default</option>
-                                <option value="club">Club</option>
-                                <option value="national">National</option>
-                                <option value="legendary">Legendary</option>
-                                <option value="fanmade">FanMade</option>
-                            </select>
-
-                            <div id="jersey-club-filter" style={{display:'none'}}>
-                                <h5 className="text-center">Club Jersey</h5>
-                                <select id="jersey-club" className="filter-sort-box ">
+                        {filters.category === "boot" && (
+                            <div>
+                                <h5 className="text-center">Boot Type</h5>
+                                <select name="bootType" value={filters.bootType} onChange={handleFilter} className="filter-sort-box">
                                     <option value="all">Default</option>
-                                    <option value="Real_Madrid">Real Madrid</option>
-                                    <option value="Barcelona">Barcelona</option>
-                                    <option value="Psg">Paris Saint Germain</option>
-                                    <option value="Ac_Milan">Ac Milan</option>
+                                    <option value="fg">Firm Ground</option>
+                                    <option value="ag">Artificial Ground</option>
+                                    <option value="mg">Multi-Ground</option>
+                                    <option value="tf">Astro Turf</option>
+                                    <option value="ic">Indoor Court</option>
                                 </select>
                             </div>
+                        )}
 
-                            <div id="jersey-national-filter" style={{display:'none'}}>
-                                <h5 className="text-center">National Jersey</h5>
-                                <select id="jersey-national" className="filter-sort-box ">
+                        {filters.category === "jersey" && (
+                            <div>
+                                <h5 className="text-center">Jersey Type</h5>
+                                <select name="jerseyType" value={filters.jerseyType} onChange={handleFilter} className="filter-sort-box">
                                     <option value="all">Default</option>
-                                    <option value="Brazil">Brazil</option>
-                                    <option value="Argentina">Argentina</option>
-                                    <option value="Portugal">Portugal</option>
-                                    <option value="England">England</option>
+                                    <option value="club">Club</option>
+                                    <option value="national">National</option>
+                                    <option value="legendary">Legendary</option>
+                                    <option value="fanmade">FanMade</option>
+                                </select>
+
+                                {filters.jerseyType === "club" && (
+                                    <div>
+                                        <h5 className="text-center">Club Jersey</h5>
+                                        <select name="jerseyClub" value={filters.jerseyClub} onChange={handleFilter} className="filter-sort-box">
+                                            <option value="all">Default</option>
+                                            <option value="Real_Madrid">Real Madrid</option>
+                                            <option value="Barcelona">Barcelona</option>
+                                            <option value="Psg">Paris Saint Germain</option>
+                                            <option value="Ac_Milan">Ac Milan</option>
+                                            <option value="Manchester_City">Manchester City</option>
+                                        </select>
+                                    </div>
+                                )}
+
+                                {filters.jerseyType === "national" && (
+                                    <div>
+                                        <h5 className="text-center">National Jersey</h5>
+                                        <select name="jerseyNational" value={filters.jerseyNational} onChange={handleFilter} className="filter-sort-box">
+                                            <option value="all">Default</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="England">England</option>
+                                        </select>
+                                    </div>
+                                )}
+
+                                {filters.jerseyType === "legendary" && (
+                                    <div>
+                                        <h5 className="text-center">Legendary Jersey</h5>
+                                        <select name="jerseyLegendary" value={filters.jerseyLegendary} onChange={handleFilter} className="filter-sort-box">
+                                            <option value="all">Default</option>
+                                            <option value="legendary-club">Club Legends</option>
+                                            <option value="legendary-national">National Icons</option>
+                                        </select>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {filters.category === "football" && (
+                            <div>
+                                <h5 className="text-center">Football Type</h5>
+                                <select name="footballType" value={filters.footballType} onChange={handleFilter} className="filter-sort-box">
+                                    <option value="all">Default</option>
+                                    <option value="grass">Grass / Outdoor</option>
+                                    <option value="non-grass">Non-Grass / Hard Ground</option>
+                                    <option value="indoor">Futsal / Indoor</option>
                                 </select>
                             </div>
+                        )}
 
-                            <div id="jersey-legendary-filter" style={{display:'none'}}>
-                                <h5 className="text-center">Legendary Jersey</h5>
-                                <select id="jersey-legendary" className="filter-sort-box ">
+                        {filters.category === "accessories" && (
+                            <div>
+                                <h5 className="text-center">Accessories Type</h5>
+                                <select name="accessoriesType" value={filters.accessoriesType} onChange={handleFilter} className="filter-sort-box">
                                     <option value="all">Default</option>
-                                    <option value="legendary-club">Club Legends</option>
-                                    <option value="legendary-national">National Icons</option>
+                                    <option value="training-gear">Training Gear</option>
+                                    <option value="player-gear">Player Gear</option>
+                                    <option value="extra">Extras</option>
                                 </select>
                             </div>
-                        </div>
-
-                        <div id="football-filter" style={{display:'none'}}>
-                            <h5 className="text-center">Football Type</h5>
-                            <select className="filter-sort-box ">
-                                <option value="all">Default</option>
-                                <option value="grass">Grass / Outdoor</option>
-                                <option value="non-grass">Non-Grass / Hard Ground</option>
-                                <option value="indoor">Futsal / Indoor</option>
-                            </select>
-                        </div>
-
-                        <div id="accessories-filter" style={{display:'none'}}>
-                            <h5 className="text-center">Accessories Type</h5>
-                            <select className="filter-sort-box ">
-                                <option value="all">Default</option>
-                                <option value="training-gear">Training Gear</option>
-                                <option value="player-gear">Player Gear</option>
-                                <option value="extra">Extras</option>
-                            </select>
-                        </div>
-
+                        )}
 
                         <h5 className="text-center">Brands</h5>
-                        <select id="brand-filter" className="filter-sort-box ">
+                        <select name="brand" value={filters.brand} onChange={handleFilter} className="filter-sort-box">
                             <option value="all">Default</option>
                             <option value="Adidas">Adidas</option>
                             <option value="Nike">Nike</option>
@@ -1299,14 +1401,14 @@ export default function Main() {
                         </select>
 
                         <h5 className="text-center">Sort By Price</h5>
-                        <select id="sort-price" className="filter-sort-box">
+                        <select value={sortPrice} onChange={(e) => setSortPrice(e.target.value)} className="filter-sort-box">
                             <option value="default">Default</option>
                             <option value="low">Low to High</option>
                             <option value="high">High to Low</option>
                         </select>
 
                         <h5 className="text-center">Sizes</h5>
-                        <select id="size-filter" className="filter-sort-box ">
+                        <select name="size" value={filters.size} onChange={handleFilter} className="filter-sort-box">
                             <option value="all">Default</option>
                             <option value="Sm">Small</option>
                             <option value="Md">Medium</option>
@@ -1315,14 +1417,14 @@ export default function Main() {
                         </select>
 
                         <h5 className="text-center">Age</h5>
-                        <select id="age-filter" className="filter-sort-box ">
+                        <select name="age" value={filters.age} onChange={handleFilter} className="filter-sort-box">
                             <option value="all">Default</option>
                             <option value="kids">Kids</option>
                             <option value="adults">Adults</option>
                         </select>
 
                         <h5 className="text-center">Gender</h5>
-                        <select id="gender-filter" className="filter-sort-box ">
+                        <select name="gender" value={filters.gender} onChange={handleFilter} className="filter-sort-box">
                             <option value="all">Default</option>
                             <option value="men">Male</option>
                             <option value="women">Female</option>
@@ -1335,60 +1437,72 @@ export default function Main() {
                     <div className="col-12 shop-product-container py-4">
                         <div className="row">
 
-                            {sProducts.map((sProduct) => (
-                                <div key={sProduct.id} className="col-6 col-sm-4 col-lg-3 my-3">
-                                    <a href="#" style={{ textDecoration: 'none' }}>
-                                        <div className="card shop-card">
+                            {filteredProducts.length === 0 ? (
+                                <>
+                                    <p className='text-center text-warning'>No products match your filters.</p>
+                                    <button
+                                        type="button"
+                                        className="btn btn-dark w-50 mx-auto"
+                                        onClick={() => {
+                                            setFilters(initialFilters);
+                                            setSortPrice("default");
+                                        }}
+                                    >
+                                        Reset filters
+                                    </button>
+                                </>
+                            ) : (
+                                filteredProducts.map((p) => (
+                                    <div key={p.id} className="col-6 col-sm-4 col-lg-3 my-3">
+                                        <a href="#" style={{ textDecoration: 'none' }}>
+                                            <div className="card shop-card">
 
-                                            <div className="card-header">
-                                                {/* Dynamic image path mapping */}
-                                                <img
-                                                    src={sProduct.image}
-                                                    className="img-fluid shop-products-image"
-                                                    alt={sProduct.name}
-                                                />
+                                                <div className="card-header">
+                                                    {/* Dynamic image path mapping */}
+                                                    <img src={p.image} className="img-fluid shop-products-image" alt={p.name} loading="lazy" />
 
-                                                {/* Conditional rendering for Special Notes */}
-                                                {sProduct.special_note && (
-                                                    <div className="product_special_note">
-                                                        <span>{sProduct.special_note}</span>
-                                                    </div>
-                                                )}
+                                                    {/* Conditional rendering for Special Notes */}
+                                                    {p.special_note && (
+                                                        <div className="product_special_note">
+                                                            <span>{p.special_note}</span>
+                                                        </div>
+                                                    )}
 
-                                                <div className="shop-product-wishlist-button d-flex justify-content-center align-items-center">
-                                                    <span>
-                                                        <img src={Wishlist} className="img-fluid shop-product-wishlist" alt="Wishlist" />
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div className="card-body">
-                                                {/* Dynamic Product Name */}
-                                                <h4 className="shop-products-name">{sProduct.name}</h4>
-                                            </div>
-
-                                            <div className="card-footer">
-                                                <div className="shop-products-price">
-                                                    {/* Dynamic Price Display */}
-                                                    <span>₹ {sProduct.price_tag}</span>
-
-                                                    <div
-                                                        className="featured-product-cart-button btn d-flex justify-content-center align-items-center"
-                                                    >
-                                                        <img src={Cart} className="img-fluid featured-products-cart" alt="Cart" />
+                                                    <div className="shop-product-wishlist-button d-flex justify-content-center align-items-center">
+                                                        <span>
+                                                            <img src={Wishlist} className="img-fluid shop-product-wishlist" alt="Wishlist" />
+                                                        </span>
                                                     </div>
                                                 </div>
 
-                                                {/* Dynamic Size text */}
-                                                <div className="shop-products-footer-info">
-                                                    {sProduct.size_text}
+                                                <div className="card-body">
+                                                    {/* Dynamic Product Name */}
+                                                    <h4 className="shop-products-name">{p.name}</h4>
                                                 </div>
-                                            </div>
 
-                                        </div>
-                                    </a>
-                                </div>
-                            ))}
+                                                <div className="card-footer">
+                                                    <div className="shop-products-price">
+                                                        {/* Dynamic Price Display */}
+                                                        <span>₹ {p.price_tag}</span>
+
+                                                        <div
+                                                            className="featured-product-cart-button btn d-flex justify-content-center align-items-center"
+                                                        >
+                                                            <img src={Cart} className="img-fluid featured-products-cart" alt="Cart" />
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Dynamic Size text */}
+                                                    {p.size_text && (
+                                                        <div className="shop-products-footer-info">{p.size_text}</div>
+                                                    )}
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                ))
+                            )}
 
                         </div>
                     </div>

@@ -31,3 +31,16 @@
     -webkit-text-stroke: 1px black;
     z-index: 5;
 }
+
+@media (min-width:501px) and (max-width:991px) {
+
+}
+
+@media (max-width:500px) {
+    .about-hero-section h1 {
+        font-size: 2.5em;
+    }
+    .about-hero-section h2 {
+        font-size: 1.3em;
+    }
+}

@@ -56,16 +56,36 @@
     
 }
 @media (min-width:501px) and (max-width:991px) {
-    .newsletter-section {
+    .cta-section {
         padding: 0 10% 0 10%;
+        min-height: 50vh;
+        height: 55vh;
     }
 
-    .newsletter-heading {
+    .cta-heading {
         font-size: 3em;
     }
 
-    .newsletter-sub-heading {
+    .cta-description {
         font-size: 1.5em;
         -webkit-text-stroke: 1px #07633c;
+    }
+}
+
+@media (max-width:500px) {
+    .cta-section {
+        padding: 0 10% 0 10%;
+        min-height: 50vh;
+        height: 60vh;
+        padding-top: 10%;
+    }
+
+    .cta-heading {
+        font-size: 2.5em;
+    }
+
+    .cta-description {
+        font-size: 1em;
+        -webkit-text-stroke: 0 white; 
     }
 }

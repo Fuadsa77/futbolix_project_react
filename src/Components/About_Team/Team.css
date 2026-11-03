@@ -12,7 +12,7 @@
 }
 
 .team-profile{
-    min-height: 18em;
+    min-height: 15em;
     border-radius:.5em;
     width: 100%;
     position: relative;
@@ -58,4 +58,8 @@
         font-size: 1.5em;
     }
 
+    .team-profile{
+    max-height: 5em;
+    width: 60%;
+}
 }

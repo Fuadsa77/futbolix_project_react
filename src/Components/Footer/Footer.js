@@ -8,6 +8,10 @@ import Insta from "../../Icons/instagram.png"
 import Scrolltop from "../../Icons/up-arrow.png"
 
 export default function Footer() {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     return (
         <>
             <footer className="container-fluid py-5 text-white">
@@ -21,7 +25,7 @@ export default function Footer() {
                             passion of the game to every player and fan.</p>
                     </div>
                     <div className="col-3 col-md-4 col-lg-3">
-                        <h4 className="footer-sub-heading text-center pt-5">Quick Links</h4>
+                        <h4 className="footer-sub-heading text-center pt-md-5">Quick Links</h4>
                         <ul type="none" className="footer-list-group">
                             <li>
                                 <NavLink to='/' className={({ isActive }) => `footer-link ${isActive ? 'active' : ''}`}>
@@ -49,7 +53,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="col-3 col-md-4 col-lg-3">
-                        <h4 className="footer-sub-heading text-center pt-5">Categories</h4>
+                        <h4 className="footer-sub-heading text-center pt-md-5">Categories</h4>
                         <ul type="none" className="footer-list-group">
                             <NavLink to='/shop'>
                                 <li className="footer-link">Jerseys</li>
@@ -64,7 +68,7 @@ export default function Footer() {
 
                     </div>
                     <div className="col-6 col-md-4 col-lg-3">
-                        <h4 className="footer-sub-heading pt-5">Contact Info</h4>
+                        <h4 className="footer-sub-heading pt-md-5">Contact Info</h4>
                         <ul type="none" className="footer-list-group">
                             <a href="Johndoe@gmail.com">
                                 <li className="footer-link-2">Email: support@Futbolix.com</li>
@@ -100,7 +104,13 @@ export default function Footer() {
                     <a href=""><img src={Insta} alt=".." className="img-fluid footer-social-media-icons mx-3" /></a>
                 </div>
                 <div className="footer-scroll-up">
-                    <a href="#Hero-section"><img src={Scrolltop} alt=".." className="img-fluid footer-scroll-up-icon" /></a>
+                    <button
+                        type="button"
+                        onClick={scrollToTop}
+                        aria-label="Scroll to top"
+                        style={{ background: "none", border: "none", padding: 0 }}
+                    ><img src={Scrolltop} alt=".." className="img-fluid footer-scroll-up-icon" />
+                    </button>
                 </div>
                 <div className="copy-right mt-3">
                     <span>&copy; 2026 Futbolix. All rights reserved.</span>

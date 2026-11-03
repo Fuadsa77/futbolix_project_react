@@ -10,12 +10,22 @@
 .shop-banner h1{
     position: absolute;
     left: 50%;
-    bottom: 20%;
+    bottom: 30%;
     transform: translatex(-50%);
     z-index: 5;
+    width: 100%;
+    text-align: center;
 
     color: #00ff87;
     font-weight: 800;
-    font-size: 3.5em;
+    font-size: 4em;
     -webkit-text-stroke: 1.5px black;
+}
+
+
+
+@media (max-width:500px) {
+    .shop-banner h1{
+        font-size: 2.5em;
+    }
 }

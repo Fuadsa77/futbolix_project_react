@@ -60,7 +60,8 @@
 
     
     .club-card img  {
-        height: 50vh;
+        height: 35vh;
+        width: 100%;
     }
 }
 
@@ -75,7 +76,7 @@
     }
 
     .club-card img  {
-        height: 35vh;
+        height: 40vh;
         width: 100%;
     }
 

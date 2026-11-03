@@ -1,7 +1,7 @@
 
 footer {
     background: #111;
-    height: 80vh;
+    height: 60vh;
     position: relative;
 }
 
@@ -156,7 +156,7 @@ footer {
 
 .copy-right{
     position: absolute;
-    bottom: 1%;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
     font-size: .8em;
@@ -165,7 +165,7 @@ footer {
 @media (min-width:501px) and (max-width:991px) {
     footer {
         padding: 0 10% 0 10%;
-        min-height: 80vh;
+        min-height: 75vh;
     }
 
     .footer-sub-heading {
@@ -190,7 +190,7 @@ footer {
 
     .footer-social-media{
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
     }
@@ -201,7 +201,7 @@ footer {
     }
 
     .footer-scroll-up{
-        bottom: 5%;
+        bottom: 8%;
         right: 3%;
         transform: translateX(-50%);
     }
@@ -235,6 +235,15 @@ footer {
         min-height: 80vh;
     }
 
+    .footer-heading{
+        font-size: 1.5em;
+    }
+
+    .footer-heading-description{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
     .footer-sub-heading {
         font-size: .8em;
         text-align: center;
@@ -250,6 +259,7 @@ footer {
     }
 
     .footer-list-group{
+        margin-top: 0;
         text-align:center;
         line-height: 1.5em;
     }
@@ -261,7 +271,7 @@ footer {
 
     .footer-social-media{
     position: absolute;
-    bottom: 3%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     }
@@ -272,7 +282,7 @@ footer {
     }
 
     .footer-scroll-up{
-        bottom: 5%;
+        bottom: 10%;
         right: 3%;
         transform: translateX(-50%);
     }

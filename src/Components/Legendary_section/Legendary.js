@@ -102,7 +102,9 @@ export default function Legendary() {
                     </div>
                 </div>
                 <div className="view-more d-flex justify-content-center">
-                    <NavLink to="/shop"><button type="button" className="btn">View More</button></NavLink>
+                    <NavLink to="/shop?category=jersey&jerseyType=legendary" className="btn">
+                        View More
+                    </NavLink>
                 </div>
             </div>
             <hr className="my-4 hr-blend" />

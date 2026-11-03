@@ -10,7 +10,7 @@ export default function Social() {
         <>
             <div className="conatiner-fluid social-section py-5">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <p className="follow-us">FOLLOW US HERE</p>
                         <a href="#" className="text-decoration-none d-flex align-items-center py-3">
                             <img src={facebook} className="img-fluid social-icon"/>
@@ -31,7 +31,7 @@ export default function Social() {
                         </a>
                     </div>
 
-                    <div className="store-details col-6 d-flex align-items-center flex-column">
+                    <div className="store-details col-12 col-md-6 d-flex align-items-center flex-column">
                         <h3 className="store-details-heading pb-3">STORES</h3>
                         <p>
                             <span className="store-location mx-2">Kochi</span>

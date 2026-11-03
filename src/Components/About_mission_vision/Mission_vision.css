@@ -6,8 +6,9 @@
 .mission-box,
 .vision-box {
     padding: 1rem;
-    overflow: hidden;
-    min-height: 20em;
+    flex: 1 1 0; 
+    min-width: 0;
+    min-height: 100%;
 }
 
 .mission-heading,
@@ -21,6 +22,7 @@
 
 .mission-head,
 .vision-head {
+    flex: 0 0 auto;
     height: 100%;
     min-width: 15%;
 }
@@ -52,6 +54,7 @@
 .about-images{
     height: 22em;
     width: 18em;
+    object-fit: cover;
 }
 
 @media (min-width:501px) and (max-width:991px) {
@@ -81,22 +84,28 @@
         padding: 0 7% 0 7%;
     }
 
+    .mission-body,
+    .vision-body {
+        flex: 0 0 auto;  
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
     .mission-head,
     .vision-head {
         width: 100%;
-        max-height: 5em;
+        max-height: none;
     }
 
-    .mission-body,
-    .vision-body {
-        border-left: none;
-        border-right: none;
-        border-top: 2px solid black;
-        width: 100%;
+    .about-images {
+        min-width: 100%;
+        min-height: 19em;
+        max-height: 20em;
     }
 
     .mission-body p,
-    .vision-body p{
+    .vision-body p {
         text-align: justify;
     }
 }

@@ -14,7 +14,7 @@ export default function
                 <h2 className="categories-heading py-4">CATEGORIES</h2>
                 <div className="row g-5 ">
                     <div className="col-6 col-sm-3">
-                        <NavLink to="/shop">
+                        <NavLink to="/shop?category=jersey">
                             <div className="card categories-card rounded-3">
                                 <img src={Jerseys}
                                     className="img-fluid categories-card-image" />
@@ -23,7 +23,7 @@ export default function
                         </NavLink>
                     </div>
                     <div className="col-6 col-sm-3">
-                        <NavLink to="/shop">
+                        <NavLink to="/shop?category=boot">
                             <div className="card categories-card rounded-3">
                                 <img src={Boots} className="img-fluid categories-card-image" />
                                 <h3 className="categories-card-title ">Boots</h3>
@@ -31,7 +31,7 @@ export default function
                         </NavLink>
                     </div>
                     <div className="col-6 col-sm-3">
-                        <NavLink to="/shop">
+                        <NavLink to="/shop?category=football">
                             <div className="card categories-card rounded-3">
                                 <img src={Football}
                                     className="img-fluid categories-card-image" />
@@ -40,7 +40,7 @@ export default function
                         </NavLink>
                     </div>
                     <div className="col-6 col-sm-3">
-                        <NavLink to="/shop">
+                        <NavLink to="/shop?category=accessories">
                             <div className="card categories-card rounded-3">
                                 <img src={Accessories}
                                     className="img-fluid categories-card-image" />

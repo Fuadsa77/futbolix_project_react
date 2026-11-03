@@ -8,7 +8,7 @@ export default function Story() {
             <div className="container-fluid story-section py-5">
                 <div className="row">
                     <div className="col-12 story-box d-flex flex-column flex-md-row align-items-center justify-content-center">
-                        <div className="story-head d-flex align-items-center text-center p-3 me-3">
+                        <div className="story-head d-flex justify-content-center align-items-center text-center p-3 me-md-3">
                             <img src={Story_image} alt="this image isn't showing" className="img-fluid rounded-3 about-images"/>
                         </div>
 

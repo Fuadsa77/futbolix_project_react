@@ -14,7 +14,7 @@ export default function Club() {
                 <div className="row g-3">
                     {/* Real madrid */}
                     <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                        <a href="#">
+                        <NavLink to="/shop?category=jersey&jerseyType=club&jerseyClub=Real_Madrid">
                             <div className="card club-card">
                                 <div className="card-body">
                                     <img src={Real_Madrid} className="img-fluid" />
@@ -23,12 +23,12 @@ export default function Club() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </NavLink>
                     </div>
 
                     {/* Barcelona */}
                     <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                        <a href="#">
+                        <NavLink to="/shop?category=jersey&jerseyType=club&jerseyClub=Barcelona">
                             <div className="card club-card">
                                 <div className="card-body">
                                     <img src={Barcelona} className="img-fluid" />
@@ -37,12 +37,12 @@ export default function Club() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </NavLink>
                     </div>
 
                     {/* Manchester City  */}
                     <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center d-md-none d-lg-block">
-                        <a href="#">
+                        <NavLink to="/shop?category=jersey&jerseyType=club&jerseyClub=Manchester_City">
                             <div className="card club-card">
                                 <div className="card-body">
                                     <img src={Mancity} className="img-fluid" />
@@ -51,12 +51,12 @@ export default function Club() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </NavLink>
                     </div>
 
                     {/* Ac milan  */}
                     <div className="col-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                        <a href="#">
+                        <NavLink to="/shop?category=jersey&jerseyType=club&jerseyClub=Ac_Milan">
                             <div className="card club-card">
                                 <div className="card-body">
                                     <img src={Acmilan} className="img-fluid" />
@@ -65,11 +65,13 @@ export default function Club() {
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="view-more d-flex justify-content-center">
-                    <NavLink to="/shop"><button type="button" className="btn">View More</button></NavLink>
+                    <NavLink to="/shop?category=jersey&jerseyType=club" className="btn">
+                        View More
+                    </NavLink>
                 </div>
             </div>
             <hr className="my-4 hr-blend" />
